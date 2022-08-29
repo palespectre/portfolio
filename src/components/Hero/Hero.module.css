@@ -1,0 +1,15 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 100vh;
+    background-color: burlywood;
+}
+
+.title {
+    font-size: clamp(2.5rem, 20vw, 20rem);
+    margin: 0;
+}
