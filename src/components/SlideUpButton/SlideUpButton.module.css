@@ -1,0 +1,58 @@
+@import "@/styles/settings";
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.2rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  line-height: 1.2;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.icon {
+  display: flex;
+  margin-right: 0.3rem;
+  margin-bottom: 0.1rem;
+}
+
+.icon.after {
+  margin-left: 1rem;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper:after {
+  content: attr(data-slide_up);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  transform: skewY(-2deg);
+  transition: bottom 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text {
+  display: flex;
+  text-align: start;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button:hover span {
+  transform: translateY(-1.5rem) skewY(-2deg);
+}
+
+.button:hover .wrapper:after {
+  bottom: 0;
+  transform: skewY(0);
+}
+
+.button.isWhite span, .button.isWhite .wrapper:after {
+  color: var(--color);
+}
