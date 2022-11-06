@@ -1,0 +1,17 @@
+.section {
+    background-color: var(--background-color);
+    color: var(--color);
+    padding-bottom: 120vh;
+    transition: background-color 0.5s cubic-bezier(0.19,1,0.22,1);
+}
+
+.section > div {
+    overflow: hidden;
+}
+
+.title {
+    margin-top: 0;
+    font-size: 30vw;
+    opacity: 0.1;
+    margin-left: -10rem;
+}
