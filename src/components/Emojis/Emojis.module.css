@@ -1,0 +1,71 @@
+.emojis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    perspective: 1000;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.emoji {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+}
+
+.emoji:first-of-type {
+    left: 10%;
+    animation: toUp 8s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(2) {
+    left: 20%;
+    animation: toUp 10s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(3) {
+    left: 30%;
+    animation: toUp 7s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(4) {
+    left: 40%;
+    animation: toUp 9s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(5) {
+    left: 50%;
+    animation: toUp 8s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(6) {
+    left: 60%;
+    animation: toUp 7s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(7) {
+    left: 70%;
+    animation: toUp 7.5s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(8) {
+    left: 80%;
+    animation: toUp 8.5s ease-in infinite both running;
+}
+
+.emoji:nth-of-type(9) {
+    left: 90%;
+    animation: toUp 10s ease-in infinite both running;
+}
+
+@keyframes toUp {
+    from {
+        bottom: -8rem;
+    }
+    to {
+        bottom: 101%;
+    }
+}

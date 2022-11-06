@@ -1,10 +1,7 @@
 import { useEffect, useRef } from 'react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import {
-  LocomotiveScrollProvider,
-  useLocomotiveScroll,
-} from 'react-locomotive-scroll';
+import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -24,15 +21,11 @@ const ScrollTriggerProxy = () => {
 
       ScrollTrigger.scrollerProxy(element, {
         scrollTop(value) {
-          return arguments.length
-            ? scroll.scrollTo(value, 0, 0)
-            : scroll.scroll.instance.scroll.y;
+          return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y;
         },
 
         scrollLeft(value) {
-          return arguments.length
-            ? scroll.scrollLeft(value, 0, 0)
-            : scroll.scroll.instance.scroll.x;
+          return arguments.length ? scroll.scrollLeft(value, 0, 0) : scroll.scroll.instance.scroll.x;
         },
 
         getBoundingClientRect() {
@@ -66,6 +59,15 @@ const ScrollTriggerProxy = () => {
           scroll.el.setAttribute(`data-direction`, direction);
           countRef.current = direction;
         }
+      }
+
+      const root = document.documentElement;
+      if (scrollAttr.y > 450) {
+        root.style.setProperty(`--background-color`, `white`);
+        root.style.setProperty(`--color`, `black`);
+      } else {
+        root.style.setProperty(`--background-color`, `black`);
+        root.style.setProperty(`--color`, `white`);
       }
     });
 

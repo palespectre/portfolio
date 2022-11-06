@@ -1,0 +1,15 @@
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s cubic-bezier(0.16, 1, 0.3, 1), visibility 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.appear-on-scroll {
+    opacity: 1;
+    visibility: visible;
+}
+
+.letter-appear-on-scroll {
+    translate: 0 -2rem !important;
+    opacity: 1 !important;
+}
