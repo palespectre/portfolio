@@ -1,3 +1,30 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header > div {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
 .nav {
-    background-color: lightskyblue;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navItem {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.navItem:last-of-type {
+    padding-right: 0;
+}
+
+@media only screen and (min-width:64em) {
 }
