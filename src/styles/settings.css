@@ -13,3 +13,12 @@
     translate: 0 -2rem !important;
     opacity: 1 !important;
 }
+
+.line-appear-on-scroll {
+    translate: 0 !important;
+    opacity: 1 !important;
+}
+
+.image-appear-on-scroll:after {
+    top: 100% !important;
+}

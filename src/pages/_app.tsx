@@ -62,11 +62,14 @@ const ScrollTriggerProxy = () => {
       }
 
       const root = document.documentElement;
-      if (scrollAttr.y > 450) {
-        root.style.setProperty(`--background-color`, `white`);
-        root.style.setProperty(`--color`, `black`);
-      } else {
+      if (scrollAttr.y > 200 && scrollAttr.y < 1200) {
         root.style.setProperty(`--background-color`, `black`);
+        root.style.setProperty(`--color`, `white`);
+      } else if (scrollAttr.y > 1200) {
+        root.style.setProperty(`--background-color`, `black`);
+        root.style.setProperty(`--color`, `white`);
+      } else {
+        root.style.setProperty(`--background-color`, `#000097`);
         root.style.setProperty(`--color`, `white`);
       }
     });
